@@ -24,3 +24,4 @@ Here are basic instructions for using it:
 6. To run the container run the command : docker run -p<portForTheAppToRunOn>:<exposedPortInDockerfile> -d <nameOfTheImage>
 7. To see if everything went well and see active containers run: docker ps
 
+LITTLE UPDATE: I found what was wrong with deleting the cart item. I put the wrong entity relationship between Item and CartItem entities. I don't know why, but I put One-To-One instead of One-To-Many, when I noticed and changed that and also added necessary changes in my service methods, everything worked just fine. 
