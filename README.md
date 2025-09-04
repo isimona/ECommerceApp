@@ -24,4 +24,6 @@ Here are basic instructions for using it:
 6. To run the container run the command : docker run -p<portForTheAppToRunOn>:<exposedPortInDockerfile> -d <nameOfTheImage>
 7. To see if everything went well and see active containers run: docker ps
 
-LITTLE UPDATE (02.09.2025): I found what was wrong with deleting the cart item. I put the wrong entity relationship between Item and CartItem entities. I don't know why, but I put One-To-One instead of One-To-Many, when I noticed and changed that and also added necessary changes in my service methods, everything worked just fine. 
+LITTLE UPDATE (02. 09. 2025): I found what was wrong with deleting the cart item. I put the wrong entity relationship between Item and CartItem entities. I don't know why, but I put One-To-One instead of One-To-Many, when I noticed and changed that and also added necessary changes in my service methods, everything worked just fine. 
+
+LITTLE UPDATE (04. 09. 2025): By adding user Id in my CartDto I managed to resolve the user issue in CartItem CRUD operations (I used to try finding userId through the field in Cart and that was failing. Now, there is a request for user Id when creating new CartItem, so I can find user through field in CartItem for upadate/delete operations) and now I can connect user with their Cart Items.
